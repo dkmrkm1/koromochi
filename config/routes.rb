@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get "posts/:id" => "posts#show"
   post "posts/create" => "posts#create"
   get "posts/:id/edit" => "posts#edit"
+  # updateアクションはフォームの値を受け取るので、ルーティングはpost
+  post "posts/:id/update" => "posts#update"
 
   get '/' => "home#top"
   get 'about' => "home#about"

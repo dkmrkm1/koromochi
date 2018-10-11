@@ -19,5 +19,11 @@ class PostsController < ApplicationController
   end
   
   def edit
+    # @postに投稿情報を代入し、編集画面で確認できるようにする。
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    redirect_to("/posts/index")
   end
 end
