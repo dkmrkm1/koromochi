@@ -4,7 +4,7 @@
     <%= form_tag("/posts/#{@post.id}/update") do %>
       <div class="form">
         <div class="form-body">
-          <textarea><%= @post.content %></textarea>
+          <textarea name="content"><%= @post.content %></textarea>
           <input type="submit" value="保存">
         </div>
       </div>
