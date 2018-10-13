@@ -34,6 +34,9 @@ class PostsController < ApplicationController
 
   # 投稿を削除して、一覧画面に遷移
   def destroy
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    
     redirect_to("/posts/index")
   end
 end
