@@ -32,6 +32,7 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  # 投稿を削除して、一覧画面に遷移
   def destroy
     redirect_to("/posts/index")
   end
