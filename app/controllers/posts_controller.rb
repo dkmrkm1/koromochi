@@ -9,13 +9,16 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
     @post = Post.new(content: params[:content])
-    @post.save
-
-    redirect_to("/posts/index")
+    if @post.save
+      redirect_to("/posts/index")
+    else
+      render("posts/new")
+    end
   end
   
   def edit
@@ -27,16 +30,20 @@ class PostsController < ApplicationController
     # パラメータで送られてきた投稿の内容を、フォームの内容で変更する
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
-    @post.save
-
-    redirect_to("/posts/index")
+    if @post.save
+      flash[:notice] = "投稿を編集しました"
+      redirect_to("/posts/index")
+    else
+      render("posts/edit")
+      # redirect_to("/posts/#{@post.id}/edit")
+    end
   end
 
   # 投稿を削除して、一覧画面に遷移
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
-    
+
     redirect_to("/posts/index")
   end
 end
