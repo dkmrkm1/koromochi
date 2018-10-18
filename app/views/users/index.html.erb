@@ -6,7 +6,7 @@
       <div class="users-index-item">
         <div class="user-right">
           <!-- 以下の<%= %>を使ってユーザー名を表示してください -->
-          <%= user.name %>
+          <%= link_to(user.name, "/users/#{user.id}") %>
         </div>
       </div>
     <!-- 以下の<% %>を使ってeach文のendを追加してください -->
