@@ -3,9 +3,9 @@
 ![](https://img.shields.io/badge/release-v0.5.0-blue.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6c8f91db14383d6c0f44/maintainability)](https://codeclimate.com/github/Duuun/rails-memo-app/maintainability)
 
-A memo app created with rails.
+![image](https://i.imgur.com/qZhR9fs.png)
 
-![image](https://i.imgur.com/vdzj0XI.png)
+A memo app created with rails.
 
 Things you may want to cover:
 
@@ -26,6 +26,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Demo
+![image](https://i.imgur.com/vdzj0XI.png)
 
 ## License
 MIT
