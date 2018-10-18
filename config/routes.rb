@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # users
-  get 'users/index' => "uesrs#index"
+  get 'users/index' => "users#index"
   get "users/:id" => "users#show"
 
   # posts
