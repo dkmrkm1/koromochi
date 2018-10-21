@@ -8,6 +8,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+  end
+
+  def create
+    @user = User.new(name: params[:name], email: params[:email])
+    @user.save
+    # redirect_to("/users/#{@user.id}")
+    redirect_to("/users/index")
   end
 end
