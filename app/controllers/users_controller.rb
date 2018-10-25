@@ -41,6 +41,10 @@ class UsersController < ApplicationController
   end
 
   def login_form
+  end
+
+  # ログイン処理
+  def login
     
   end
 end

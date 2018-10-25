@@ -3,11 +3,13 @@
     <div class="form-heading">ログイン</div>
     <div class="form users-form">
       <div class="form-body">
-        <p>メールアドレス</p>
-        <input>
-        <p>パスワード</p>
-        <input type="password">
-        <input type="submit" value="ログイン">
+        <%= form_tag("/login") do %>
+          <p>メールアドレス</p>
+          <input name="email">
+          <p>パスワード</p>
+          <input type="password" name="password">
+          <input type="submit" value="ログイン">
+        <% end %>
       </div>
     </div>
   </div>
