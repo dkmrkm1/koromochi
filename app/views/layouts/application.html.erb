@@ -16,6 +16,12 @@
       </div>
       <!-- header-link -->
       <ul class="header-menus">
+        <% if session[:user_id] %>
+          <li>
+            現在ログインしているユーザーのid: <%= session[:user_id] %>
+          </li>
+        <% end %>
+
         <li>
           <%= link_to("Koromochiとは", "/about") %>
         </li>
