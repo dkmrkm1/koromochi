@@ -16,10 +16,9 @@
       </div>
       <!-- header-link -->
       <ul class="header-menus">
-        <% current_user = User.find_by(id: session[:user_id]) %>
-        <% if current_user %>
+        <% if @current_user %>
           <li>
-            <%= link_to(current_user.name, "/users/#{current_user.id}") %>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
           <li>
             <%= link_to("投稿一覧", "/posts/index") %>
