@@ -36,6 +36,7 @@ class PostsController < ApplicationController
   def update
     # パラメータで送られてきた投稿の内容を、フォームの内容で変更する
     @post = Post.find_by(id: params[:id])
+    @post.title = params[:title]
     @post.content = params[:content]
     if @post.save
       flash[:notice] = "投稿を編集しました"
