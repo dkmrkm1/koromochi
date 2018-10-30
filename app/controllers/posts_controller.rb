@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(
+      title: params[:title],
       content: params[:content],
       # 新規投稿時、user_idに投稿したユーザーの値を加える
       user_id: @current_user.id

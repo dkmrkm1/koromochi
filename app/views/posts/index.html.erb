@@ -1,14 +1,12 @@
 <div class="row">
-  <!-- <div class="container"> -->
-    <% @posts.each do |post| %>
-      <div class="col s6 m4 l3">
-        <div class="card">
-          <div class="card-content black-text">
-            <span class="card-title">タイトル</span>
-            <%= link_to(post.content, "/posts/#{post.id}") %>
-          </div>
+  <% @posts.each do |post| %>
+    <div class="col s6 m4 l3">
+      <div class="card" style="min-height: 250px;">
+        <div class="card-content black-text">
+          <span class="card-title"><%= post.title %></span>
+          <%= link_to(post.content, "/posts/#{post.id}") %>
         </div>
       </div>
-    <% end %>
-  <!-- </div> -->
+    </div>
+  <% end %>
 </div>
