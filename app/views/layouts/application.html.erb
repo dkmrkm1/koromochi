@@ -66,5 +66,11 @@
     <% end %>
     <%= yield %>
 
+    <div class="fixed-action-btn">
+      <%= link_to posts_new_path, class: "btn-floating btn-large red" do %>
+        <i class="large material-icons">mode_edit</i>
+      <% end %>
+    </div>
+
   </body>
 </html>
