@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <nav role="navigation">
+    <nav class="nav-extended" role="navigation">
       <div class="nav-wrapper orange darken-1">
         <% if @current_user %>
           <%= link_to("Koromochi", "/posts/index", class: "brand-logo") %>
@@ -58,6 +58,7 @@
         </ul>
       </div>
     </nav>
+
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>

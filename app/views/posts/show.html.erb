@@ -1,12 +1,11 @@
-<div class="main posts-show">
+<div class="row">
   <div class="container">
-    <div class="posts-show-item">
-      <p><%= @post.title %></p>
-      <p><%= @post.content %></p>
-      <div class="post-time">
-        <%= @post.created_at %>
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title"><%= @post.title %></span>
+        <p><%= @post.content %></p>
       </div>
-      <div class="post-menus">
+      <div class="card-action">
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
         <!-- {method: "post"}とすることで「post」ルーティングを探す  -->
         <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
