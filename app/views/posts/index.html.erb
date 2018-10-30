@@ -4,7 +4,7 @@
       <div class="card" style="min-height: 250px;">
         <div class="card-content black-text">
           <span class="card-title"><%= post.title %></span>
-          <%= link_to(post.content, "/posts/#{post.id}") %>
+          <%= link_to(simple_format(post.content), "/posts/#{post.id}") %>
         </div>
       </div>
     </div>

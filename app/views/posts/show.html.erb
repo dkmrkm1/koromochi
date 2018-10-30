@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-content">
         <span class="card-title"><%= @post.title %></span>
-        <p><%= @post.content %></p>
+        <p><%= simple_format(@post.content) %></p>
       </div>
       <div class="card-action">
         <%= link_to("編集", "/posts/#{@post.id}/edit") %>
