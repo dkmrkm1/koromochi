@@ -8,48 +8,52 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
+    <nav>
+      <div class="nav-wrapper">
         <% if @current_user %>
-          <%= link_to("Koromochi", "/posts/index") %>
+          <%= link_to("Koromochi", "/posts/index", class: "brand-logo") %>
         <% else %>
-          <%= link_to("Koromochi", "/") %>
+          <%= link_to("Koromochi", "/", class: "brand-logo") %>
         <% end %>
+
+        <!-- header-link -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <% if @current_user %>
+            <li>
+              <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            </li>
+            <li>
+              <%= link_to("投稿一覧", "/posts/index") %>
+            </li>
+            <li>
+              <%= link_to("新規投稿", "/posts/new") %>
+            </li>
+            <li>
+              <%= link_to("ユーザー一覧", "/users/index") %>
+            </li>
+            <li>
+              <%= link_to("ログアウト", "/logout", {method: :post}) %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to("Koromochiとは", "/about") %>
+            </li>
+            <li>
+              <%= link_to("新規登録", "/signup") %>
+            </li>
+            <li>
+              <%= link_to("ログイン", "/login") %>
+            </li>
+          <% end %>
+        </ul>
+
       </div>
-      <!-- header-link -->
-      <ul class="header-menus">
-        <% if @current_user %>
-          <li>
-            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
-          </li>
-          <li>
-            <%= link_to("投稿一覧", "/posts/index") %>
-          </li>
-          <li>
-            <%= link_to("新規投稿", "/posts/new") %>
-          </li>
-          <li>
-            <%= link_to("ユーザー一覧", "/users/index") %>
-          </li>
-          <li>
-            <%= link_to("ログアウト", "/logout", {method: :post}) %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to("Koromochiとは", "/about") %>
-          </li>
-          <li>
-            <%= link_to("新規登録", "/signup") %>
-          </li>
-          <li>
-            <%= link_to("ログイン", "/login") %>
-          </li>
-        <% end %>
-      </ul>
-    </header>
+    </nav>
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>
