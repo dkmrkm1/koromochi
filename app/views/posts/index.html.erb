@@ -1,9 +1,14 @@
-<div class="main posts-index">
-  <div class="container">
+<div class="row">
+  <!-- <div class="container"> -->
     <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <%= link_to(post.content, "/posts/#{post.id}") %>
+      <div class="col s6 m4 l3">
+        <div class="card">
+          <div class="card-content black-text">
+            <span class="card-title">タイトル</span>
+            <%= link_to(post.content, "/posts/#{post.id}") %>
+          </div>
+        </div>
       </div>
     <% end %>
-  </div>
+  <!-- </div> -->
 </div>
