@@ -1,0 +1,15 @@
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/daisuke/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20181031-7501-1jxv183.rb extconf.rb
+creating Makefile
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20181031-7501-1mmtlxs

@@ -1,0 +1,15 @@
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+/Users/daisuke/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20181031-7501-1m26zfn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/daisuke/Desktop/data/app/ruby/tweet_app/vendor/bundle/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20181031-7501-1ye8jkw/bootsnap
