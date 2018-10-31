@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # posts
   get 'posts/index' => "posts#index"
   get "posts/new" => "posts#new"
-  get "posts/:id" => "posts#show"
+  get "posts/:id" => "posts#show" , as: "posts"
   post "posts/create" => "posts#create"
   get "posts/:id/edit" => "posts#edit"
   # updateアクションはフォームの値を受け取るので、ルーティングはpost
